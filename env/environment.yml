@@ -1,0 +1,16 @@
+name: bioenv
+channels:
+  - pytorch
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.11
+  - pandas
+  - numpy
+  - scikit-learn
+  - biopython
+  - pytorch
+  - torchvision
+  - torchaudio
+  - cpuonly
+  - tensorflow
