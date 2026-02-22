@@ -14,19 +14,22 @@
 Требуется установленная Anaconda/Miniconda (Windows или Linux).
 
 *bash*
+````
 cd protein-design-pipeline
 conda env create -f env/environment.yml
 conda activate bioenv
 python -c "import torch, sklearn, Bio, pandas, numpy; print('ok')"
+````
 
 ## Чтение FASTA и получения таблицы с длинами последовательностей
 
 Пример скрипта:
 
 *bash*
+``
 cd src
 python read_fasta.py
-
+``
 
 Скрипт читает FASTA-файлы из `data/` и создаёт версионированный CSV  
 `data/sequences_summary_v*.csv` с информацией о:
