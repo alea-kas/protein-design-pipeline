@@ -9,16 +9,59 @@
 - `data/` – входные и выходные данные (FASTA, CSV и т.п.).
 - `notebooks/` – эксперименты в Jupyter (пока пусто или по мере появления).
 
-## Установка окружения
+## Установка окружения Miniconda и Bioconda на кластер
 
-Требуется установленная Anaconda/Miniconda (Windows или Linux).
+### Установка Miniconda в домашний каталог
 
-````
-cd protein-design-pipeline
-conda env create -f env/environment.yml
-conda activate bioenv
-python -c "import torch, sklearn, Bio, pandas, numpy; print('ok')"
-````
+На логин-узле:
+
+```bash
+cd ~
+bash Miniconda3-latest-Linux-x86_64.sh
+```
+
+В установщике:
+
+- принять лицензию (`yes`);
+- оставить путь по умолчанию `/home/$USER/miniconda3` (просто нажать Enter);
+- согласиться на инициализацию `conda init`.
+
+После установки перезапустить shell:
+
+```bash
+exec bash
+conda --version
+```
+
+### Настройка Bioconda
+
+Однократно настроить каналы (создаётся/обновляется `~/.condarc`):
+
+```bash
+conda config --add channels bioconda
+conda config --add channels conda-forge
+conda config --set channel_priority strict
+```
+
+### Окружение для проекта
+
+Создать окружение и установить зависимости:
+
+```bash
+conda create -n chrommaenv python=3.10 -y
+conda activate chrommaenv
+
+conda install biopython pandas numpy scikit-learn -y
+```
+
+Проверка:
+
+```bash
+python -c "import Bio, pandas, numpy, sklearn; print('ok')"
+```
+
+Если выводит `ok`, окружение готово.
+```
 
 ## Чтение FASTA и получения таблицы с длинами последовательностей
 
