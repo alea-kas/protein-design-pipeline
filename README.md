@@ -23,7 +23,7 @@ bash Miniconda3-latest-Linux-x86_64.sh
 В установщике:
 
 - принять лицензию (`yes`);
-- оставить путь по умолчанию `/home/$USER/miniconda3` (просто нажать Enter);
+- оставить путь по умолчанию `/home/$USER/miniconda3` (нажать Enter);
 - согласиться на инициализацию `conda init`.
 
 После установки перезапустить shell:
