@@ -13,7 +13,6 @@
 
 Требуется установленная Anaconda/Miniconda (Windows или Linux).
 
-*bash*
 ````
 cd protein-design-pipeline
 conda env create -f env/environment.yml
@@ -25,7 +24,6 @@ python -c "import torch, sklearn, Bio, pandas, numpy; print('ok')"
 
 Пример скрипта:
 
-*bash*
 ``
 cd src
 python read_fasta.py
