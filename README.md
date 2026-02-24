@@ -24,10 +24,10 @@ python -c "import torch, sklearn, Bio, pandas, numpy; print('ok')"
 
 Пример скрипта:
 
-``
+````
 cd src
 python read_fasta.py
-``
+````
 
 Скрипт читает FASTA-файлы из `data/` и создаёт версионированный CSV  
 `data/sequences_summary_v*.csv` с информацией о:
