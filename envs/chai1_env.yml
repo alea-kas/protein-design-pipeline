@@ -1,0 +1,26 @@
+name: chai1_env
+channels:
+  - pytorch
+  - nvidia
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.10
+  - pip
+  # Базовые библиотеки для анализа данных и биоинформатики
+  - pandas
+  - numpy
+  - scikit-learn
+  - joblib
+  - matplotlib
+  - seaborn
+  - biopython
+  # PyTorch для нейросетей (Chai-1 и KAN)
+  - pytorch::pytorch
+  - pytorch::torchvision
+  - pytorch::torchaudio
+  - nvidia::pytorch-cuda=12.1
+  - pip:
+    # Установка специфических ML-библиотек и предикторов
+    - chai-lab
+    - pykan
